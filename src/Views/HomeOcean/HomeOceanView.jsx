@@ -3,22 +3,22 @@ import BookSection from '../../Components/BookSection/BookSection'
 import ReviewSection from '../../Components/ReviewSection/ReviewSection'
 import OrderSection from '../../Components/OrderSection/OrderSection'
 
-const HomeMalmoView = () => {
+const HomeOcean = () => {
 
-    const malmo = {
-    title: 'Drottningtorget',
-    address: 'Drottningtorget 1000',
+    const ocean = {
+    title: 'Oceanhamnen',
+    address: 'Oceanhamnen 1000',
     phone: '070 123 4567',
-    color: 'red'
+    color: 'pink'
   }
 
   return (
     <div>
-      <BookSection restaurant={malmo} />
-      <ReviewSection restaurant={malmo} />
-      <OrderSection restaurant={malmo} />
+      <BookSection restaurant={ocean}/>
+      <ReviewSection restaurant={ocean}/>
+      <OrderSection restaurant={ocean}/>
     </div>
   )
 }
 
-export default HomeMalmoView
+export default HomeOcean

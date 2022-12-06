@@ -3,3 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: min(70%, 1200px);
+  margin: auto;
+}
+
+
+.btn {
+  padding: .8em 2em;
+  border: 3px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}

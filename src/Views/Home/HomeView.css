@@ -1,0 +1,62 @@
+.Start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1A1A1A;
+    background: black;
+}
+
+.Start .img-div {
+    width: 220px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.Start .img-div img {
+    width: 100%;
+}
+
+.Start .nav-links {
+    list-style: none;
+    flex: 1;
+}
+
+.Start .link-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 0.5rem;
+    margin-block: 1rem;
+    cursor: pointer;
+}
+
+.Start p {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.Start p,
+.Start small {
+    color: rgb(146, 142, 142);
+}
+
+@media (min-width: 800px) {
+
+    .Start .nav-links {
+        display: flex;
+        justify-content: space-between;
+        width: min(90%, 800px);
+    }
+
+    .Start .img-div {
+        width: 300px;
+        margin: 6rem 0 4rem 0;
+    }
+}

@@ -1,0 +1,62 @@
+.OrderSection {
+    background: #141313;
+    padding-block: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.OrderSection .header {
+    text-transform: uppercase;
+}
+
+.OrderSection p {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.OrderSection .text-div {
+    width: min(70%, 400px);
+}
+
+.OrderSection .img-div {
+    display: none;
+    width: 400px;
+}
+
+.OrderSection .img-div img{
+    width: 100%;
+}
+
+.OrderSection .button-div {
+    display: flex;
+}
+
+.OrderSection .btn-takeaway,
+.OrderSection .btn-delivery {
+    width: 100%;
+}
+
+.OrderSection .btn-takeaway.orange {
+    background: orange;
+}
+.OrderSection .btn-takeaway.red {
+    background: red;
+}
+.OrderSection .btn-takeaway.pink {
+    background: pink;
+}
+
+
+
+@media (min-width: 880px) {
+    .OrderSection {
+        flex-direction: row;
+    }
+
+    .OrderSection .img-div {
+        display: block;
+    }
+}

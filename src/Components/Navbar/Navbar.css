@@ -23,6 +23,9 @@
 .transparent {
     background: transparent;
 }
+.Navbar .ml1 {
+    margin-left: .5rem;
+}
 /* ----- LOGO ----- */
 .Navbar .logo-wrapper {
     opacity: 0%;
@@ -44,7 +47,7 @@
 }
 /* ----- LEFT NAV ----- */
 .Navbar .left-nav-div {
-    display: 100%;
+    width: 100%;
 }
 
 /* ----- HAMBURGER ----- */
@@ -187,11 +190,17 @@
 /* ----- FLAG ----- */
 .Navbar .flag {
     background-color: var(--hbg-clr);
-    width: 150px;
+    width: 170px;
     height: 100px;
     margin-top: 0;
     border-radius: 2px;
     cursor: pointer;
+    margin-left: 2rem;
+    
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 3.5s ease-in-out forwards;
+    animation: swinging 3.5s ease-in-out forwards;
 }
 .Navbar .flag .d-link {
     padding-right: 0;
@@ -207,7 +216,7 @@
     top: 5rem;
     left: 0rem;
     padding-left: 2.5rem;
-    width: 150px;
+    width: 100%;
 }
 .Navbar .flag .d-dropdown:hover .small-link:not(:hover) {
     color: #faad6a;
@@ -246,6 +255,34 @@
 
 .Navbar .d-link-wrapper:hover > .dropdown-wrapper {
     visibility: visible;
+}
+
+/* ----- ANIMATION ----- */
+
+@-webkit-keyframes swinging{
+    0%{-webkit-transform: rotateX(20deg);}
+    50%{-webkit-transform: rotateX(-10deg)}
+    100%{-webkit-transform: rotateX(20deg);}
+}
+ 
+@keyframes swinging{
+    0%{transform: rotateX(20deg);}
+    50%{transform: rotateX(-10deg)}
+    100%{transform: rotateX(20deg);}
+}
+
+
+.a1 {
+    animation-duration: 2s;
+}
+.a2 {
+    animation-duration: 3s;
+}
+.a3 {
+    animation-duration: 4s;
+}
+.a4 {
+    animation-duration: 4s;
 }
 
 @media screen and (min-width: 992px) {

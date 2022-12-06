@@ -70,9 +70,10 @@ const Navbar = () => {
                     <div className='dmenu-container'>
                         <ul className='d-nav-links dflex'>
                             <li className={`d-link-wrapper ${flag ? `` : `flag`}`}>
+                            {/* <li className={`d-link-wrapper animate__animated animate__flipInX${flag ? `` : `flag`}`}> */}
                                 <Link to="#" className='d-link '>Boka bord</Link>
                             </li>
-                            <li className={`d-link-wrapper ${flag ? `` : `flag`}`}>
+                            <li className={`d-link-wrapper a1 ${flag ? `` : `flag`}`}>
                                 <p className='d-link'>Menyer</p>
                                  <div className='dropdown-wrapper'>
                                     <ul className={`d-dropdown`}>
@@ -82,16 +83,16 @@ const Navbar = () => {
                                     </ul>
                                  </div>
                             </li>
-                            <li className={`d-link-wrapper ${flag ? `` : `flag`}`}>
+                            <li className={`d-link-wrapper a2  ${flag ? `` : `flag`}`}>
                                 <p className='d-link'>Beställ</p>
                                 <div className='dropdown-wrapper'>
                                     <ul className={`d-dropdown`}>
-                                        <li><Link to="#" className='small-link'>Take Away</Link></li>
+                                        <li><Link to="#" className='small-link'>Take<span className='ml1'></span>Away</Link></li>
                                         <li><Link to="#" className='small-link'>Hemkörning</Link></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li className={`d-link-wrapper ${flag ? `` : `flag`}`}>
+                            <li className={`d-link-wrapper a3 ${flag ? `` : `flag`}`}>
                                 <Link to="#" className='d-link'>Om oss</Link>
                             </li>
                         </ul>

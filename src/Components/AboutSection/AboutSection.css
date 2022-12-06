@@ -1,0 +1,37 @@
+.AboutSection {
+    padding-bottom: 4rem;
+}
+
+.AboutSection .box-div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.AboutSection .box {
+    background: blue;
+    width: min(100%, 420px);
+    margin: auto;
+}
+
+.AboutSection .about {
+    height: 300px;
+}
+
+.AboutSection .catering,
+.AboutSection .events {
+    height: 200px;
+}
+
+@media (min-width: 880px) {
+    .AboutSection .box-div {
+        flex-direction: inherit;
+    }
+
+    .AboutSection .box {
+        height: 300px;
+    }
+}
+
+
+

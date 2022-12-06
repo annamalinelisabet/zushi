@@ -37,13 +37,18 @@
     cursor: pointer;
 }
 
-.Start p {
-    font-size: 1.2rem;
+.Start h1 {
+    font-size: 1.5rem;
     text-transform: uppercase;
+    font-family: var(--main-font);
+}
+
+.Start p {
+    font-size: .8rem;
 }
 
 .Start p,
-.Start small {
+.Start h1 {
     color: rgb(146, 142, 142);
 }
 

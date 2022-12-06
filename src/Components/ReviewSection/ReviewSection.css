@@ -11,18 +11,18 @@
   }
 
 .ReviewSection.orange{
-    border-top: 1px solid orange;
-    border-bottom: 1px solid orange;
+    border-top: 1px solid var(--hbg-clr);
+    border-bottom: 1px solid var(--hbg-clr);
 }
 
 .ReviewSection.red {
-    border-top: 2px solid red;
-    border-bottom: 2px solid red;
+    border-top: 2px solid var(--malmo-clr);
+    border-bottom: 2px solid var(--malmo-clr);
 }
 
 .ReviewSection.pink {
-    border-top: 2px solid pink;
-    border-bottom: 2px solid pink;
+    border-top: 2px solid var(--ocean-clr);
+    border-bottom: 2px solid var(--ocean-clr);
 }
 
 .ReviewSection img {

@@ -10,7 +10,7 @@
   --hbg-clr:  #E17918; 
   --malmo-clr: #9A0000;
   --ocean-clr: #A1574D;
-  --main-dark: #1A1A1A;
+  --main-dark: #141313;
   --darker-dark: #131314;
   --main-font: 'Teko', sans-serif;
   --secondary-font: 'Carter One', cursive;
@@ -47,11 +47,13 @@ li {
 }
 
 .btn {
-  padding: 8em 2em;
+  padding: .8em 2em;
   border: 3px solid transparent;
   background: transparent;
   cursor: pointer;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
+  outline: none;
 }
+

@@ -1,24 +1,25 @@
 .OrderSection {
-    background: #141313;
+    background: var(--main-dark);
     padding-block: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .OrderSection .header {
     text-transform: uppercase;
+    font-family: var(--main-font);
+    line-height: 1.8rem;
 }
 
 .OrderSection p {
     color: white;
-    margin-bottom: 1.5rem;
 }
 
 .OrderSection .text-div {
-    width: min(70%, 400px);
+    width: min(70%, 420px);
 }
 
 .OrderSection .img-div {
@@ -32,23 +33,71 @@
 
 .OrderSection .button-div {
     display: flex;
+    margin-block: 1.5rem;
 }
 
 .OrderSection .btn-takeaway,
 .OrderSection .btn-delivery {
     width: 100%;
+    transition: all 0.3s;
+    position: relative;
 }
 
 .OrderSection .btn-takeaway.orange {
-    background: orange;
+    background: var(--hbg-clr);
 }
 .OrderSection .btn-takeaway.red {
-    background: red;
+    background: var(--malmo-clr);
 }
 .OrderSection .btn-takeaway.pink {
-    background: pink;
+    background: var(--ocean-clr);
 }
 
+.OrderSection .btn-takeaway.orange:hover {
+	background: #e17918e6;
+}
+.OrderSection .btn-takeaway.red:hover {
+	background: #9A0000d0;
+}
+.OrderSection .btn-takeaway.pink:hover {
+	background: #a1574d83;
+}
+
+.OrderSection .btn-delivery::after {
+	content: '';
+	position: absolute;
+    inset: 0;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	transform: scale(1.2,1.4);
+}
+
+.OrderSection .btn-delivery.orange::after{
+    border: 1px solid var(--hbg-clr);
+}
+.OrderSection .btn-delivery.red::after{
+    border: 1px solid var(--malmo-clr);
+}
+.OrderSection .btn-delivery.pink::after{
+    border: 1px solid var(--ocean-clr);
+}
+
+.OrderSection .btn-delivery:hover::after {
+	opacity: 1;
+	transform: scale(1,1.1);
+}
+
+
+.OrderSection small {
+    color: white;
+    font-size: .7rem;
+}
+
+.OrderSection .badge-div img {
+    height: 30px;
+    margin-top: .5rem;
+}
 
 
 @media (min-width: 880px) {
@@ -57,6 +106,13 @@
     }
 
     .OrderSection .img-div {
+        display: block;
+    }
+}
+
+@media (max-width: 415px) {
+
+    .OrderSection .button-div {
         display: block;
     }
 }

@@ -7,6 +7,7 @@ const HomeHbgView = () => {
     <div>
       <Navbar />
       <Hero />
+      <Hero />
     </div>
   )
 }

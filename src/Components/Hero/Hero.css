@@ -12,9 +12,3 @@
     width: 400px; 
     height: 200px;
 }
-
-@media screen and (min-width: 992px){
-    .Hero .logo-wrapper img {
-    }
-
-}

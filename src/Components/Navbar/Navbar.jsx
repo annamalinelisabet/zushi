@@ -1,36 +1,112 @@
-import React from 'react'
 import './Navbar.css'
-import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
+import { NavLink, Link } from 'react-router-dom'
+import { BiDownArrow } from 'react-icons/bi'
 import logo from '../../Img/logo.jpg'
+import 'animate.css'
 
 const Navbar = () => {
-  return (
-    <div className='Navbar'>
-        <div className='navbar-wrapper'>
-            <div className='logo-wrapper'>
-                <img src={logo} alt="logo" className='logo'/>
+
+    //show logo on scroll 
+    const [logoScroll, setLogoScroll] = useState(false)
+
+    // change bg om nav
+    const [color, setColor] = useState(false)
+        
+    // Show nav-menu on click
+    const [showMenu, setShowMenu] = useState(false)
+
+    // Show dropdown-menu on click
+    const [showDropdownMenu, setShowDropdownMenu] = useState(false)
+    const [showDropdownOrder, setShowDropdownOrder] = useState(false)
+    
+    const handleClick = () => {
+        if(showMenu) {
+            setShowMenu(false)
+        }
+    }
+
+    const changeBg = () => {
+        if(window.scrollY >= 1) {
+            setColor(true);
+        }else {
+            setColor(false)
+        }
+    };
+
+    const showLogoOnScroll = () => {
+        if(window.scrollY >= 460) {
+            setLogoScroll(true);
+        }else {
+            setLogoScroll(false)
+        }
+    };
+
+    window.addEventListener("scroll", changeBg)
+    window.addEventListener("scroll", showLogoOnScroll)
+
+    return (
+        <div className={`Navbar fixed ${color ? `color` : `transparent`}`}>
+            <div className={`navbar-wrapper container`}>
+                <div className='right-nav-div'>
+                    <div className={`logo-wrapper ${showMenu ? '' : 'show', logoScroll ? 'show' : ''} `} >
+                        <Link>
+                            <img src={logo} alt="logo" className='logo'/>
+                        </Link>
+                    </div>
+                </div>
+            
+
+                <div className='left-nav-div'>
+                    <div className={`burger ${showMenu ? `open` : ``}`} onClick={() => setShowMenu(state => !state)}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
             </div>
 
-        <div className='nav-link-wrapper'>
-            <ul className='nav-links'>
-                <li className='link-wrapper'>
-                    <NavLink to="/" className="link">Boka bord</NavLink>
-                </li>
-                <li className='link-wrapper'>
-                    <NavLink to="/" className="link">Menyer</NavLink>
-                </li>
-                <li className='link-wrapper'>
-                    <NavLink to="/" className="link">Beställ</NavLink>   
-                </li>
-                <li className='link-wrapper'>
-                    <NavLink to="/" className="link">Om oss</NavLink>
-                </li>
-            </ul>
-        </div>
+            {/* --- HAMBURGER MENU --- */}
+
+            { showMenu &&
+            <div className='menu-container'>
+                <div className='ham-links-wrapper'>
+                    <ul className='ham-nav-links'>
+                        <li>
+                            <Link to="#" className='link'>Boka bord</Link>
+                        </li>
+                        <li>
+                            <p className='link link-dd' onClick={() => setShowDropdownMenu(state => !state)} >Menyer</p>
+                            { showDropdownMenu &&
+                                <ul className={`dropdown`}>
+                                    <li><Link to="#" className='small-link'>Lunch</Link></li>
+                                    <li><Link to="#" className='small-link'>Middag</Link></li>
+                                    <li><Link to="#" className='small-link'>Dryck</Link></li>
+                                </ul>
+                            }
+                        </li>
+                        <li>
+                            <p to="/" className="link link-dd" onClick={() => setShowDropdownOrder(state => !state)} >Beställ</p>
+                            { showDropdownOrder &&
+                                <ul className={`dropdown`}>
+                                    <li><Link to="#" className='small-link'>Lunch</Link></li>
+                                    <li><Link to="#" className='small-link'>Middag</Link></li>
+                                    <li><Link to="#" className='small-link'>Dryck</Link></li>
+                                </ul>
+                            }   
+                        </li>
+                        <li>
+                            <Link to="#" className='link'>Om oss</Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            }
 
 
+
         </div>
-    </div>
   )
 }
 

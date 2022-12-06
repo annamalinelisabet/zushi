@@ -1,0 +1,20 @@
+.Hero .img {
+    background: url('../../Img/hero.png') rgba(0, 0, 0, 0.571);
+    object-fit: cover;
+    background-blend-mode:multiply;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.Hero .logo-wrapper img {
+    width: 400px; 
+    height: 200px;
+}
+
+@media screen and (min-width: 992px){
+    .Hero .logo-wrapper img {
+    }
+
+}

@@ -1,5 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --hbg-clr:  #E17918; 
+  --malmo-clr: #9A0000;
+  --ocean-clr: #A1574D;
+  --main-dark: #1A1A1A;
+  --darker-dark: #131314;
+  --main-font: 'Teko', sans-serif;
+  --secondary-font: 'Carter One', cursive;
+
+}
+
+html, body {
+  background-color: var(--main-dark);
+}
+

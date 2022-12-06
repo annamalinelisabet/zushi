@@ -1,17 +1,19 @@
 .OrderSection {
     background: var(--main-dark);
-    padding-block: 4rem;
+    padding-block: 6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    width: 100%;
+    margin: auto;
 }
 
 .OrderSection .header {
     text-transform: uppercase;
     font-family: var(--main-font);
-    line-height: 1.8rem;
+    line-height: 2rem;
+    font-size: 2.5rem;
 }
 
 .OrderSection p {
@@ -19,12 +21,13 @@
 }
 
 .OrderSection .text-div {
-    width: min(70%, 420px);
+    width: min(70%, 500px);
+    padding: 1rem;
 }
 
 .OrderSection .img-div {
     display: none;
-    width: 400px;
+    width: 600px;
 }
 
 .OrderSection .img-div img{
@@ -100,9 +103,10 @@
 }
 
 
-@media (min-width: 880px) {
+@media (min-width: 992px) {
     .OrderSection {
         flex-direction: row;
+        padding: 2rem 0 0 0 ;
     }
 
     .OrderSection .img-div {

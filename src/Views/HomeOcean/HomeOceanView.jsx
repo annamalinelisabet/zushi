@@ -2,6 +2,7 @@ import React from 'react'
 import BookSection from '../../Components/BookSection/BookSection'
 import ReviewSection from '../../Components/ReviewSection/ReviewSection'
 import OrderSection from '../../Components/OrderSection/OrderSection'
+import Footer from '../../Components/Footer/Footer'
 
 const HomeOcean = () => {
 
@@ -17,6 +18,7 @@ const HomeOcean = () => {
       <BookSection restaurant={ocean}/>
       <ReviewSection restaurant={ocean}/>
       <OrderSection restaurant={ocean}/>
+      <Footer restaurant={ocean}/>
     </div>
   )
 }

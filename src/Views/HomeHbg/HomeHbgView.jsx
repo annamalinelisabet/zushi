@@ -1,5 +1,6 @@
 import AboutSection from '../../Components/AboutSection/AboutSection'
 import BookSection from '../../Components/BookSection/BookSection'
+import Footer from '../../Components/Footer/Footer'
 import OrderSection from '../../Components/OrderSection/OrderSection'
 import ReviewSection from '../../Components/ReviewSection/ReviewSection'
 
@@ -18,6 +19,7 @@ const HomeHbgView = () => {
       <ReviewSection restaurant={hbg} />
       <OrderSection restaurant={hbg} />
       <AboutSection restaurant={hbg} />
+      <Footer restaurant={hbg} />
     </div>
   )
 }

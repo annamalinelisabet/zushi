@@ -1,26 +1,104 @@
 .AboutSection {
     padding-bottom: 4rem;
+    padding-inline: 1rem;
 }
 
 .AboutSection .box-div {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 1rem;
 }
 
 .AboutSection .box {
-    background: blue;
-    width: min(100%, 420px);
+    width: 100%;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.AboutSection .text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AboutSection .text-div p,
+.AboutSection .text-div h2 {
+    color: white;
+    text-align: center;
+}
+
+.AboutSection .text-div h2 {
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    font-size: 2rem;
 }
 
 .AboutSection .about {
+    padding: 1rem 2rem;
     height: 300px;
+}
+
+.AboutSection .btn-about {
+    border: 1px solid white;
+    margin-top: 1rem;
+
+    transition: all ease-out 300ms;
+}
+
+.AboutSection .btn-about:hover {
+    color: var(--main-dark);
+    background: rgba(255, 255, 255, 0.681);
+    border: 1px solid rgba(255, 255, 255, 0.681);
+}
+
+.AboutSection .about.orange {
+    background: var(--hbg-clr);
+}
+.AboutSection .about.red {
+    background: var(--malmo-clr);
+}
+.AboutSection .about.pink {
+    background: var(--ocean-clr);
 }
 
 .AboutSection .catering,
 .AboutSection .events {
     height: 200px;
+    position: relative;
+    cursor: pointer;
+}
+
+.AboutSection img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: all .5s ease-out;
+}
+
+.AboutSection .box:hover img {
+    transform: scale(1.1);
+}
+
+.AboutSection .catering::before,
+.AboutSection .events::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.348);
+}
+
+.AboutSection .box-text {
+    text-transform: uppercase;
+    color: white;
+    font-family: var(--main-font);
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media (min-width: 880px) {
@@ -29,7 +107,7 @@
     }
 
     .AboutSection .box {
-        height: 300px;
+        height: 400px;
     }
 }
 

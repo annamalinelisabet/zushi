@@ -19,6 +19,7 @@ const Navbar = () => {
     // Show dropdown-menu on click
     const [showDropdownMenu, setShowDropdownMenu] = useState(false)
     const [showDropdownOrder, setShowDropdownOrder] = useState(false)
+    const [flag, setFlag] = useState(false)
     
     const handleClick = () => {
         if(showMenu) {
@@ -29,8 +30,10 @@ const Navbar = () => {
     const changeBg = () => {
         if(window.scrollY >= 1) {
             setColor(true);
+            setFlag(true);
         }else {
             setColor(false)
+            setFlag(false);
         }
     };
 
@@ -64,6 +67,35 @@ const Navbar = () => {
                         <span></span>
                     </div>
 
+                    <div className='dmenu-container'>
+                        <ul className='d-nav-links dflex'>
+                            <li className={`d-link-wrapper ${flag ? `` : `flag`}`}>
+                                <Link to="#" className='d-link'>Boka bord</Link>
+                            </li>
+                            <li className={`d-link-wrapper ${flag ? `` : `flag`}`}>
+                                <p className='d-link' onClick={() => setShowDropdownMenu(state => !state)} >Menyer</p>
+                                { showDropdownMenu &&
+                                    <ul className={`d-dropdown`}>
+                                        <li><Link to="#" className='small-link'>Lunch</Link></li>
+                                        <li><Link to="#" className='small-link'>Middag</Link></li>
+                                        <li><Link to="#" className='small-link'>Dryck</Link></li>
+                                    </ul>
+                                }
+                            </li>
+                            <li className={`d-link-wrapper ${flag ? `` : `flag`}`}>
+                                <p className='d-link' onClick={() => setShowDropdownOrder(state => !state)}>Beställ</p>
+                                { showDropdownOrder &&
+                                <ul className={`d-dropdown`}>
+                                    <li><Link to="#" className='small-link'>Take Away</Link></li>
+                                    <li><Link to="#" className='small-link'>Hemkörning</Link></li>
+                                </ul>
+                            }   
+                            </li>
+                            <li className={`d-link-wrapper ${flag ? `` : `flag`}`}>
+                                <Link to="#" className='d-link'>Om oss</Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -90,9 +122,8 @@ const Navbar = () => {
                             <p to="/" className="link link-dd" onClick={() => setShowDropdownOrder(state => !state)} >Beställ</p>
                             { showDropdownOrder &&
                                 <ul className={`dropdown`}>
-                                    <li><Link to="#" className='small-link'>Lunch</Link></li>
-                                    <li><Link to="#" className='small-link'>Middag</Link></li>
-                                    <li><Link to="#" className='small-link'>Dryck</Link></li>
+                                    <li><Link to="#" className='small-link'>Take Away</Link></li>
+                                    <li><Link to="#" className='small-link'>Hemkörning</Link></li>
                                 </ul>
                             }   
                         </li>

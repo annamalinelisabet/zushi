@@ -7,6 +7,9 @@
     width: 100%;
     z-index: 2;
 }
+.Navbar .dflex {
+    display: flex;
+}
 .Navbar .navbar-wrapper {
     display: flex;
     justify-content: space-between;
@@ -37,7 +40,11 @@
 
 /* ----- RIGHT NAV ----- */
 .Navbar .right-nav-div {
-    width: 50%;
+    width: 100%;
+}
+/* ----- LEFT NAV ----- */
+.Navbar .left-nav-div {
+    display: 100%;
 }
 
 /* ----- HAMBURGER ----- */
@@ -143,4 +150,47 @@
 }
 .Navbar .dropdown {
     margin-bottom: 1rem;
+}
+
+/* ----- DESKTOP NAVBAR ----- */
+
+.Navbar .dmenu-container {
+    display: none;
+    width: 100%;
+}
+.Navbar .dmenu-container ul {
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Navbar .d-nav-links {
+    width: 50vw;
+}
+.Navbar .d-link {
+    color: #fff;
+    cursor: pointer;
+    font-family: var(--main-font);
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.Navbar .d-link-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .5rem;
+}
+.Navbar .flag {
+    background-color: var(--hbg-clr);
+    width: 150px;
+    height: 100px;
+    margin-top: 0;
+}
+
+
+@media screen and (min-width: 992px) {
+    .Navbar .burger {
+        display: none;
+    }
+    .Navbar .dmenu-container {
+        display: flex;
+    }
 }

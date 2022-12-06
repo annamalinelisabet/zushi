@@ -70,26 +70,26 @@ const Navbar = () => {
                     <div className='dmenu-container'>
                         <ul className='d-nav-links dflex'>
                             <li className={`d-link-wrapper ${flag ? `` : `flag`}`}>
-                                <Link to="#" className='d-link'>Boka bord</Link>
+                                <Link to="#" className='d-link '>Boka bord</Link>
                             </li>
                             <li className={`d-link-wrapper ${flag ? `` : `flag`}`}>
-                                <p className='d-link' onClick={() => setShowDropdownMenu(state => !state)} >Menyer</p>
-                                { showDropdownMenu &&
+                                <p className='d-link'>Menyer</p>
+                                 <div className='dropdown-wrapper'>
                                     <ul className={`d-dropdown`}>
                                         <li><Link to="#" className='small-link'>Lunch</Link></li>
                                         <li><Link to="#" className='small-link'>Middag</Link></li>
                                         <li><Link to="#" className='small-link'>Dryck</Link></li>
                                     </ul>
-                                }
+                                 </div>
                             </li>
                             <li className={`d-link-wrapper ${flag ? `` : `flag`}`}>
-                                <p className='d-link' onClick={() => setShowDropdownOrder(state => !state)}>Beställ</p>
-                                { showDropdownOrder &&
-                                <ul className={`d-dropdown`}>
-                                    <li><Link to="#" className='small-link'>Take Away</Link></li>
-                                    <li><Link to="#" className='small-link'>Hemkörning</Link></li>
-                                </ul>
-                            }   
+                                <p className='d-link'>Beställ</p>
+                                <div className='dropdown-wrapper'>
+                                    <ul className={`d-dropdown`}>
+                                        <li><Link to="#" className='small-link'>Take Away</Link></li>
+                                        <li><Link to="#" className='small-link'>Hemkörning</Link></li>
+                                    </ul>
+                                </div>
                             </li>
                             <li className={`d-link-wrapper ${flag ? `` : `flag`}`}>
                                 <Link to="#" className='d-link'>Om oss</Link>

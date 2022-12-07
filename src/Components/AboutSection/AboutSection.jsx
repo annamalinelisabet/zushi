@@ -3,8 +3,13 @@ import './AboutSection.css'
 import Catering from '../../Images/catering.png'
 import Event from '../../Images/event.png'
 import AW from '../../Images/aw.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 const AboutSection = ({ restaurant }) => {
+    useEffect(() => {
+        AOS.init();
+      }, [])
 
     const [name, setName] = useState('')
 
@@ -16,7 +21,7 @@ const AboutSection = ({ restaurant }) => {
   return (
     <div className='AboutSection'>
         <div className="box-div">
-            <div className="box catering">
+            <div className="box catering" >
                 <img src={Catering} alt="Catering" />
                 <h3 className='box-text'>Catering</h3>
             </div>

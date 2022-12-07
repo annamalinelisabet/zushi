@@ -8,11 +8,33 @@
     display: flex;
     justify-content: space-between;
 }
-
-/*! ÄNDRA */
-.Footer h1,
-.Footer p {
-    color: white;
+.Footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.Footer .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.Footer .icon-wrapper.orange {
+    background: var(--hbg-clr);
+}
+.Footer .icon-wrapper.red {
+    background: var(--malmo-clr);
+}
+.Footer .icon-wrapper.pink {
+    background: var(--ocean-clr);
+}
+.Footer .icon {
+    color: #fff;
+    width: 40px;
+    height: 40px;
 }
 
 .Footer .img-div {
@@ -24,7 +46,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.566);
+    background-color: rgba(0, 0, 0, 0.54);
 }
 
 .Footer .img-div img{

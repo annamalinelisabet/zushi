@@ -52,6 +52,16 @@
     color: rgb(146, 142, 142);
 }
 
+.Start .hbg:hover h1, .Start .hbg:hover p{
+    color: var(--hbg-clr);
+}
+.Start .malmo:hover h1, .Start .malmo:hover p {
+    color: var(--malmo-clr);
+}
+.Start .ocean:hover h1, .Start .ocean:hover p {
+    color: var(--ocean-clr);
+}
+
 @media (min-width: 800px) {
 
     .Start .nav-links {

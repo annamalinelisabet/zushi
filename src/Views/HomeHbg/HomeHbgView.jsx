@@ -11,8 +11,9 @@ const HomeHbgView = () => {
   
   const hbg = {
     title: 'karlsgatan',
-    address: 'Karlsgatan 1000',
-    phone: '070 123 4567',
+    address: 'Karlsgatan 1A252 24 Helsingborg',
+    phone: '042 449 90 89',
+    email: 'hbg@zushi.se',
     color: 'orange',
     img: 'https://gastrogate.com/files/32517/dsc02658hemsida.jpg',
     quote: 'Maten var fantastisk precis som servicen. Finns verkligen inget att klaga på! Rekommenderar starkt.'

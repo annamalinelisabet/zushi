@@ -9,37 +9,33 @@ import { AiOutlineMail } from 'react-icons/ai'
 const Footer = ({ restaurant }) => {
   return (
     <div className='Footer'>
-        <div className="container">
-          <div className='wrapper'>
+          <div className={`wrapper ${restaurant.color}`}>
 
             <div className='icon-container'>
                 <div className={`icon-wrapper ${restaurant.color}`}>
                   <FaMapMarkerAlt className={`icon`}/>
                 </div>
-                <p></p>
+                <p>{restaurant.address}</p>
             </div>
 
             <div className='icon-container'>
                 <div className={`icon-wrapper ${restaurant.color}`}>
                   <IoIosCall className={`icon`}/>
                 </div>
-                <p></p>
+                <p>{restaurant.phone}</p>
             </div>
 
             <div className='icon-container'>
                 <div className={`icon-wrapper ${restaurant.color}`}>
                   <AiOutlineMail className={`icon`}/>
                 </div>
-                <p></p>
+                <p>{restaurant.email}</p>
             </div>
-
           </div>
+
+            <div className='line'></div>
             <div className="text-div">
             </div>
-            <div className='img-div'>
-                <img src={Icon} alt="Icon" />
-            </div>
-        </div>
     </div>
   )
 }

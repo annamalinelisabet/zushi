@@ -51,6 +51,11 @@
 }
 
 /* ----- HAMBURGER ----- */
+.Navbar .burger-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
 .Navbar .burger {
     display: flex;
     flex-wrap: wrap;
@@ -273,24 +278,20 @@
 
 
 .a1 {
-    animation-duration: 2s;
+    animation-delay: 3s;
 }
 .a2 {
-    animation-duration: 3s;
+    animation-delay: 4s;
 }
 .a3 {
-    animation-duration: 4s;
-}
-.a4 {
-    animation-duration: 4s;
+    animation-delay: 5s;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
     .Navbar .burger {
         display: none;
     }
     .Navbar .dmenu-container {
         display: flex;
     }
-
 }

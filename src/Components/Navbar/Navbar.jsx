@@ -1,5 +1,5 @@
 import './Navbar.css'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { BiDownArrow } from 'react-icons/bi'
 import logo from '../../Img/logo.jpg'
@@ -7,8 +7,7 @@ import 'animate.css'
 
 const Navbar = () => {
 
-    //show logo on scroll 
-    const [logoScroll, setLogoScroll] = useState(false)
+    const navRef = useRef()
 
     // change bg om nav
     const [color, setColor] = useState(false)
@@ -19,6 +18,7 @@ const Navbar = () => {
     // Show dropdown-menu on click
     const [showDropdownMenu, setShowDropdownMenu] = useState(false)
     const [showDropdownOrder, setShowDropdownOrder] = useState(false)
+    
     const [flag, setFlag] = useState(false)
     
     const handleClick = () => {
@@ -35,14 +35,16 @@ const Navbar = () => {
             setColor(false)
             setFlag(false);
         }
+        
     };
 
     const showLogoOnScroll = () => {
         if(window.scrollY >= 460) {
-            setLogoScroll(true);
+            navRef.current.classList.add("show")
         }else {
-            setLogoScroll(false)
+            navRef.current.classList.remove("show")
         }
+        
     };
 
     window.addEventListener("scroll", changeBg)
@@ -52,7 +54,7 @@ const Navbar = () => {
         <div className={`Navbar fixed ${color ? `color` : `transparent`}`}>
             <div className={`navbar-wrapper container`}>
                 <div className='right-nav-div'>
-                    <div className={`logo-wrapper ${showMenu ? '' : 'show', logoScroll ? 'show' : ''} `} >
+                    <div ref={navRef} className={`logo-wrapper ${showMenu ? '' : 'show'} `} >
                         <Link>
                             <img src={logo} alt="logo" className='logo'/>
                         </Link>
@@ -61,10 +63,12 @@ const Navbar = () => {
             
 
                 <div className='left-nav-div'>
-                    <div className={`burger ${showMenu ? `open` : ``}`} onClick={() => setShowMenu(state => !state)}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <div className='burger-container'>
+                        <div className={`burger ${showMenu ? `open` : ``}`} onClick={() => setShowMenu(state => !state)}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
 
                     <div className='dmenu-container'>

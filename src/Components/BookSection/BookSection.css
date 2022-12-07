@@ -35,6 +35,17 @@
     object-position: right;
 }
 
+.BookSection .btn-book {
+    border: 1px solid white;
+
+    transition: 250ms ease-out;
+}
+
+.BookSection .btn-book:hover {
+    background: white;
+    color: black;
+}
+
 
 
 @media (min-width: 880px) {

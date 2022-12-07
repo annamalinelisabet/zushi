@@ -5,7 +5,7 @@ import { BiDownArrow } from 'react-icons/bi'
 import logo from '../../Img/logo.jpg'
 import 'animate.css'
 
-const Navbar = () => {
+const Navbar = ({ restaurant }) => {
 
     const navRef = useRef()
 
@@ -64,40 +64,39 @@ const Navbar = () => {
 
                 <div className='left-nav-div'>
                     <div className='burger-container'>
-                        <div className={`burger ${showMenu ? `open` : ``}`} onClick={() => setShowMenu(state => !state)}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div className={`burger  ${showMenu ? `open` : ``}`} onClick={() => setShowMenu(state => !state)}>
+                            <span className={` ${restaurant.color}`}></span>
+                            <span className={` ${restaurant.color}`}></span>
+                            <span className={` ${restaurant.color}`}></span>
                         </div>
                     </div>
 
                     <div className='dmenu-container'>
                         <ul className='d-nav-links dflex'>
-                            <li className={`d-link-wrapper ${flag ? `` : `flag`}`}>
-                            {/* <li className={`d-link-wrapper animate__animated animate__flipInX${flag ? `` : `flag`}`}> */}
-                                <Link to="#" className='d-link '>Boka bord</Link>
+                            <li className={`d-link-wrapper ${restaurant.color} ${flag ? `` : `flag`}`}>
+                                <Link to="#" className={`d-link ${restaurant.color}`}>Boka bord</Link>
                             </li>
-                            <li className={`d-link-wrapper a1 ${flag ? `` : `flag`}`}>
-                                <p className='d-link'>Menyer</p>
+                            <li className={`d-link-wrapper a1 ${restaurant.color} ${flag ? `` : `flag`}`}>
+                                <p className={`d-link hd-link ${restaurant.color}`}>Menyer</p>
                                  <div className='dropdown-wrapper'>
-                                    <ul className={`d-dropdown`}>
-                                        <li><Link to="#" className='small-link'>Lunch</Link></li>
-                                        <li><Link to="#" className='small-link'>Middag</Link></li>
-                                        <li><Link to="#" className='small-link'>Dryck</Link></li>
+                                    <ul className={`d-dropdown ${restaurant.color}`}>
+                                        <li><Link to="#" className={`small-link ${restaurant.color}`}>Lunch</Link></li>
+                                        <li><Link to="#" className={`small-link ${restaurant.color}`}>Middag</Link></li>
+                                        <li><Link to="#" className={`small-link ${restaurant.color}`}>Dryck</Link></li>
                                     </ul>
                                  </div>
                             </li>
-                            <li className={`d-link-wrapper a2  ${flag ? `` : `flag`}`}>
-                                <p className='d-link'>Beställ</p>
+                            <li className={`d-link-wrapper a2 ${restaurant.color}  ${flag ? `` : `flag`}`}>
+                                <p className={`d-link hd-link ${restaurant.color}`}>Beställ</p>
                                 <div className='dropdown-wrapper'>
-                                    <ul className={`d-dropdown`}>
-                                        <li><Link to="#" className='small-link'>Take<span className='ml1'></span>Away</Link></li>
-                                        <li><Link to="#" className='small-link'>Hemkörning</Link></li>
+                                    <ul className={`d-dropdown ${restaurant.color}`}>
+                                        <li><Link to="#" className={`small-link ${restaurant.color}`}>Take<span className='ml1'></span>Away</Link></li>
+                                        <li><Link to="#" className={`small-link ${restaurant.color}`}>Hemkörning</Link></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li className={`d-link-wrapper a3 ${flag ? `` : `flag`}`}>
-                                <Link to="#" className='d-link'>Om oss</Link>
+                            <li className={`d-link-wrapper a3 ${restaurant.color} ${flag ? `` : `flag`}`}>
+                                <Link to="#" className={`d-link ${restaurant.color}`}>Om oss</Link>
                             </li>
                         </ul>
                     </div>
@@ -111,29 +110,29 @@ const Navbar = () => {
                 <div className='ham-links-wrapper'>
                     <ul className='ham-nav-links'>
                         <li>
-                            <Link to="#" className='link'>Boka bord</Link>
+                            <Link to="#" className={`link ${restaurant.color}`} >Boka bord</Link>
                         </li>
                         <li>
-                            <p className='link link-dd' onClick={() => setShowDropdownMenu(state => !state)} >Menyer</p>
+                            <p className={`link link-dd ${restaurant.color}`} onClick={() => setShowDropdownMenu(state => !state)}>Menyer</p>
                             { showDropdownMenu &&
                                 <ul className={`dropdown`}>
-                                    <li><Link to="#" className='small-link'>Lunch</Link></li>
-                                    <li><Link to="#" className='small-link'>Middag</Link></li>
-                                    <li><Link to="#" className='small-link'>Dryck</Link></li>
+                                    <li><Link to="#" className={`small-link ${restaurant.color}`}>Lunch</Link></li>
+                                    <li><Link to="#" className={`small-link ${restaurant.color}`}>Middag</Link></li>
+                                    <li><Link to="#" className={`small-link ${restaurant.color}`}>Dryck</Link></li>
                                 </ul>
                             }
                         </li>
                         <li>
-                            <p to="/" className="link link-dd" onClick={() => setShowDropdownOrder(state => !state)} >Beställ</p>
+                            <p to="/" className={`link link-dd ${restaurant.color}`} onClick={() => setShowDropdownOrder(state => !state)} >Beställ</p>
                             { showDropdownOrder &&
                                 <ul className={`dropdown`}>
-                                    <li><Link to="#" className='small-link'>Take Away</Link></li>
-                                    <li><Link to="#" className='small-link'>Hemkörning</Link></li>
+                                    <li><Link to="#" className={`small-link ${restaurant.color}`}>Take Away</Link></li>
+                                    <li><Link to="#" className={`small-link ${restaurant.color}`}>Hemkörning</Link></li>
                                 </ul>
                             }   
                         </li>
                         <li>
-                            <Link to="#" className='link'>Om oss</Link>
+                            <Link to="#" className={`link  ${restaurant.color}`} >Om oss</Link>
                         </li>
                     </ul>
                 </div>

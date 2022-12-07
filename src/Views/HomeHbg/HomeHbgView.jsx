@@ -13,13 +13,15 @@ const HomeHbgView = () => {
     title: 'karlsgatan',
     address: 'Karlsgatan 1000',
     phone: '070 123 4567',
-    color: 'orange'
+    color: 'orange',
+    img: 'https://gastrogate.com/files/32517/dsc02658hemsida.jpg',
+    quote: 'Maten var fantastisk precis som servicen. Finns verkligen inget att klaga på! Rekommenderar starkt.'
   }
   
   return (
     <div>
-      <Navbar />
-      <Hero />
+      <Navbar restaurant={hbg} />
+      <Hero  restaurant={hbg}/>
       <BookSection restaurant={hbg} />
       <ReviewSection restaurant={hbg} />
       <OrderSection restaurant={hbg} />

@@ -24,7 +24,8 @@ const AboutSection = ({ restaurant }) => {
                 <div className="text-div">
                     <h2>om oss</h2>
                     <p>Zushi serverar högkvalitativ mat baserad på en unik kombination av traditionell sushi och japas, små delikata japanska rätter gjorda för delning.</p>
-                    <button className='btn btn-about'>läs mer</button>
+                    <button className='btn btn-about'>läs mer
+                    </button>
                 </div>
             </div>
 

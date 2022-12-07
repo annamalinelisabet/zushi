@@ -1,13 +1,14 @@
 .ReviewSection {
     height: 350px;
     position: relative;
+    cursor: pointer;
 }
 
 .ReviewSection:after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.558);
+    background-color: rgba(0, 0, 0, 0.651);
   }
 
 .ReviewSection.orange{
@@ -31,10 +32,29 @@
     width: 100%;
 }
 
-.ReviewSection h3 {
+.ReviewSection .quote {
     position: absolute;
     color: white;
-    top: calc(50% - 11px);
-    left: calc(50% - 93.1px);
+    top: calc(50%);
+    left: calc(50%);
     z-index: 5;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: transform .2s;
+}
+.ReviewSection .quote::before {
+    content: open-quote;
+    font-size: 2rem;
+    font-family: serif;
+    margin-right: .5rem;
+}
+.ReviewSection .quote::after {
+    content: close-quote;
+    font-size: 2rem;
+    font-family: serif;
+    margin-left: .5rem;
+}
+
+.ReviewSection:hover .quote{
+    transform:  translate(-50%, -50%) scale(1.2);
 }

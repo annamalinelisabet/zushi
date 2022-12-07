@@ -1,3 +1,9 @@
+:root {
+    --offset: 10px;
+    --border-size: 2px;
+    --vertical-offset: -10px;
+    --horizontal-offset: -10px;
+}
 .BookSection {
     background: var(--main-dark);
     padding-block: 4rem;
@@ -35,17 +41,95 @@
     object-position: right;
 }
 
-.BookSection .btn-book {
-    border: 1px solid white;
+/* ----- BUTTON ----- */
 
-    transition: 250ms ease-out;
+.BookSection .btn-book {
+    margin-top: 2rem;
+    position: relative;
+    padding: 1.5em 3em;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+    transition: background .8s ease;
+}
+.BookSection .btn-book.orange {
+    color: var(--hbg-clr);
+}
+.BookSection .btn-book.red {
+    color: var(--malmo-clr);
+}
+.BookSection .btn-book.pink {
+    color: var(--ocean-clr);
 }
 
 .BookSection .btn-book:hover {
-    background: white;
-    color: black;
+    background: rgba(100, 0, 0, .03);
 }
 
+.BookSection .horizontal {
+    position: absolute;
+    top:  -11px;
+    right: -1px;
+    bottom: -10px;
+    left: 1px;
+    transition: transform .8s ease;
+    will-change: transform;
+    border-top: var(--border-size) solid currentcolor;
+    border-bottom: var(--border-size) solid currentcolor;
+}
+
+.BookSection .horizontal::before {
+    content: '';
+    position: absolute;
+    border: inherit;
+    top: 9px;
+    bottom: 8px;
+    left: -10px;
+    right: -10px;
+}
+
+.BookSection .btn-book:hover > .horizontal {
+    transform: scaleX(0);
+}
+
+.BookSection .vertical {
+    position: absolute;
+    top: -11px;
+    right: -.6px;
+    bottom: -10px;
+    left: -.2px;
+    transition: transform .8s ease;
+    will-change: transform;
+}
+
+.BookSection .vertical::before {
+    top: 11px;
+    bottom: 10px;
+    left: -11px;
+    right: -13px;
+} 
+.BookSection .vertical::before {
+    content: '';
+    position: absolute;
+    border: inherit;
+}
+
+.BookSection .vertical {
+    border-left: var(--border-size) solid currentcolor;
+    border-right: var(--border-size) solid currentcolor;
+}
+
+
+.BookSection .btn-book:hover > .vertical {
+    transform: scaleY(0);
+}
 
 
 @media (min-width: 880px) {

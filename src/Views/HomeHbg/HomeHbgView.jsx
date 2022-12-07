@@ -1,3 +1,6 @@
+import React from 'react'
+import Hero from '../../Components/Hero/Hero'
+import Navbar from '../../Components/Navbar/Navbar'
 import AboutSection from '../../Components/AboutSection/AboutSection'
 import BookSection from '../../Components/BookSection/BookSection'
 import Footer from '../../Components/Footer/Footer'
@@ -15,6 +18,8 @@ const HomeHbgView = () => {
   
   return (
     <div>
+      <Navbar />
+      <Hero />
       <BookSection restaurant={hbg} />
       <ReviewSection restaurant={hbg} />
       <OrderSection restaurant={hbg} />

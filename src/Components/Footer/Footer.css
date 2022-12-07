@@ -1,0 +1,38 @@
+.Footer {
+    background: black;
+    width: 100%;
+    padding-block: 2rem;
+}
+
+.Footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*! ÄNDRA */
+.Footer h1,
+.Footer p {
+    color: white;
+}
+
+.Footer .img-div {
+    height: 200px;
+    position: relative;
+}
+
+.Footer .img-div::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.566);
+}
+
+.Footer .img-div img{
+    height: 100%;
+}
+
+
+
+
+
+

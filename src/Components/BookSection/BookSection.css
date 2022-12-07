@@ -1,0 +1,71 @@
+.BookSection {
+    background: var(--main-dark);
+    padding-block: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.BookSection .header {
+    text-transform: uppercase;
+    font-family: var(--main-font);
+    font-size: 2.5rem;
+}
+
+.BookSection p {
+    color: white;
+    margin-bottom: .8rem;
+}
+
+.BookSection .text-div {
+    width: min(70%, 400px);
+}
+
+.BookSection .img-div {
+    height: 300px;
+    width: 300px;
+}
+
+.BookSection .img-div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+
+.BookSection .btn-book {
+    border: 1px solid white;
+
+    transition: 250ms ease-out;
+}
+
+.BookSection .btn-book:hover {
+    background: white;
+    color: black;
+}
+
+
+
+@media (min-width: 880px) {
+    .BookSection {
+        flex-direction: row;
+    }
+
+    .BookSection .img-div {
+        height: 400px;
+        width: 400px;
+    }
+
+}
+
+@media (max-width: 300px) {
+    .BookSection .img-div {
+        display: none;
+    }
+    .BookSection .header {
+        font-size: 1.5rem;
+    }
+
+}

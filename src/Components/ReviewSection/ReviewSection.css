@@ -1,0 +1,40 @@
+.ReviewSection {
+    height: 350px;
+    position: relative;
+}
+
+.ReviewSection:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.558);
+  }
+
+.ReviewSection.orange{
+    border-top: 1px solid var(--hbg-clr);
+    border-bottom: 1px solid var(--hbg-clr);
+}
+
+.ReviewSection.red {
+    border-top: 2px solid var(--malmo-clr);
+    border-bottom: 2px solid var(--malmo-clr);
+}
+
+.ReviewSection.pink {
+    border-top: 2px solid var(--ocean-clr);
+    border-bottom: 2px solid var(--ocean-clr);
+}
+
+.ReviewSection img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.ReviewSection h3 {
+    position: absolute;
+    color: white;
+    top: calc(50% - 11px);
+    left: calc(50% - 93.1px);
+    z-index: 5;
+}

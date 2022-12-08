@@ -16,7 +16,8 @@ const HomeHbgView = () => {
     email: 'hbg@zushi.se',
     color: 'orange',
     img: 'https://gastrogate.com/files/32517/dsc02658hemsida.jpg',
-    quote: 'Maten var fantastisk precis som servicen. Finns verkligen inget att klaga på! Rekommenderar starkt.'
+    quote: 'Maten var fantastisk precis som servicen. Finns verkligen inget att klaga på! Rekommenderar starkt.',
+    link : 'https://www.google.com/maps/dir//Zushi+Helsingborg,+Karlsgatan+1A,+252+24/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x4652324a85f02c11:0x89715c1925f419ff?sa=X&ved=2ahUKEwj7jZKKxOn7AhWrXfEDHQWSAA8Q9Rd6BAhWEAQ'
   }
   
   return (

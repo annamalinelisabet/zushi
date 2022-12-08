@@ -3,16 +3,32 @@
     width: 100%;
     padding-block: 2rem;
 }
+.Footer .dflex {
+    display: flex;
+}
+.Footer .mt1 {
+    margin-top: 1rem;
+}
 
 .Footer .wrapper {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.Footer .icons-wrapper {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+}
+
 .Footer .icon-wrapper {
     width: 50px;
     height: 50px;
     border-radius: 50px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,23 +60,92 @@
     color: #fff;
     margin-top: 1rem;
     font-size: 16px;
+    display: none;
+    text-align: center;
 }
 
 .Footer .line {
     width: 100%;
     height: 2px;
     background-color: #fff;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
+/* ----- OPEN ----- */
+
+.Footer .text-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-direction: column;
+}
+.Footer h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: var(--main-font);
+    font-weight: 100;
+    font-size: 35px;
+}
+
+.Footer p {
+    color: #fff;
+}
+
+.Footer .small-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.Footer .small-title.orange {
+    color: var(--hbg-clr);
+}
+.Footer .small-title.red {
+    color: var(--malmo-clr);
+}
+.Footer .small-title.pink {
+    color: var(--ocean-clr);
+}
+
+.Footer .text-wrapper {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.Footer .icons-wrapper-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.Footer .icon-container-social {
+    padding: 1rem;
+}
+.Footer .insta {
+    width: 36px;
+    height: 36px;
+}
+
+
 @media (min-width: 992px) {
-    .BookSection {
-        flex-direction: row;
+    .Footer .wrapper {
+        width: 100%;
+    }
+    .Footer .icons-wrapper {
+        justify-content: space-evenly;
+        width: 50%;
+    }
+    .Footer .text-wrapper {
+        width: 30%;
     }
 
-    .BookSection .img-div {
-        height: 400px;
-        width: 400px;
+    .Footer .icon-container p {
+        display: inherit;
+    }
+
+    .Footer .address {
+        width: 240px;
     }
 
 }

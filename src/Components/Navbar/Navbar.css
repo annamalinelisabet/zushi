@@ -19,6 +19,7 @@
 }
 .color {
     background: rgba(0, 0, 0, 0.715);
+    transition: 550ms ease-in-out;
 }
 .transparent {
     background: transparent;
@@ -40,6 +41,7 @@
     opacity: 100%;
     transition: all ease-in 1s;
 }
+
 
 /* ----- RIGHT NAV ----- */
 .Navbar .right-nav-div {
@@ -181,6 +183,7 @@
     display: none;
     width: 100%;
 }
+
 .Navbar .dmenu-container ul {
     justify-content: space-evenly;
     align-items: center;
@@ -222,7 +225,7 @@
     border-radius: 2px;
     cursor: pointer;
     margin-left: 2rem;
-    
+        
     -webkit-transform-origin: 50% 0;
     transform-origin: 50% 0;
     -webkit-animation: swinging 3.5s ease-in-out forwards;

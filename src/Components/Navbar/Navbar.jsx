@@ -1,11 +1,14 @@
 import './Navbar.css'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import { BiDownArrow } from 'react-icons/bi'
 import logo from '../../Img/logo.jpg'
-import 'animate.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 const Navbar = ({ restaurant }) => {
+    useEffect(() => {
+        AOS.init();
+      }, [])
 
     const navRef = useRef()
 

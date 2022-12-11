@@ -42,9 +42,12 @@ const Navbar = ({ restaurant }) => {
     };
 
     const showLogoOnScroll = () => {
-        if(window.scrollY >= 460) {
+        if(window.scrollY >= 460  ) {
             navRef.current.classList.add("show")
         }else {
+            navRef.current.classList.remove("show")
+        }
+        if(showMenu){
             navRef.current.classList.remove("show")
         }
         
@@ -57,11 +60,13 @@ const Navbar = ({ restaurant }) => {
         <div className={`Navbar fixed ${color ? `color` : `transparent`}`}>
             <div className={`navbar-wrapper container`}>
                 <div className='right-nav-div'>
-                    <div ref={navRef} className={`logo-wrapper ${showMenu ? '' : 'show'} `} >
+                    
+                    <div ref={navRef} className={`logo-wrapper`} >
                         <Link>
                             <img src={logo} alt="logo" className='logo'/>
                         </Link>
                     </div>
+
                 </div>
             
 

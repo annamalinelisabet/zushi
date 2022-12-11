@@ -10,7 +10,7 @@ const BookSection = ({restaurant}) => {
   }, [])
   return (
     <div className='BookSection'>
-        <div className="text-div" data-aos="fade-up" data-aos-duration="3000">
+        <div className="text-div" data-aos="fade-up" data-aos-duration="3000"  data-aos-once="true">
             <h1 className={`header ${restaurant.color}`}>zushi {restaurant.title}</h1>
             <p>På ett enkelt opretentiöst men utsökt, iögonfallande och representativt sätt skapar vi en känsla av lyx, direkt till dig! Var god och fråga om vad du ska välja och vilka drycker som passar bäst med de rätter du har valt.</p>
             <button className={`btn-book ${restaurant.color}`}>
@@ -19,7 +19,7 @@ const BookSection = ({restaurant}) => {
                 <div className='vertical'></div>
             </button>
         </div>
-        <div className="img-div" data-aos="fade-left" data-aos-duration="1000">
+        <div className="img-div" data-aos="fade-left" data-aos-duration="1000"  data-aos-once="true">
             <img src={Sushi} alt="Sushitallrik" />
         </div>
     </div>

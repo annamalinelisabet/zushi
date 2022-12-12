@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import logo from '../../Img/logo.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css'
+import Popup from '../PopUp/Popup';
 
 const Navbar = ({ restaurant }) => {
     useEffect(() => {
@@ -11,6 +12,8 @@ const Navbar = ({ restaurant }) => {
       }, [])
 
     const navRef = useRef()
+
+    const [showModal, setShowModal] = useState(false)
 
     // change bg om nav
     const [color, setColor] = useState(false)
@@ -23,6 +26,10 @@ const Navbar = ({ restaurant }) => {
     const [showDropdownOrder, setShowDropdownOrder] = useState(false)
     
     const [flag, setFlag] = useState(false)
+
+    const handleClose = () => {
+        setShowModal(false)
+    }
     
     // const handleClick = () => {
     //     if(showMenu) {
@@ -43,7 +50,7 @@ const Navbar = ({ restaurant }) => {
     }, [])
 
     useEffect(() => {
-        if(showMenu != false){
+        if(showMenu !== false){
             navRef.current.classList.add("indexlow")
             console.log('minus')
         }
@@ -110,7 +117,7 @@ const Navbar = ({ restaurant }) => {
                     <div className='dmenu-container'>
                         <ul className='d-nav-links dflex'>
                             <li className={`d-link-wrapper ${restaurant.color} ${flag ? `` : `flag`}`}>
-                                <Link to="#" className={`d-link ${restaurant.color}`}>Boka bord</Link>
+                                <Link to="#" className={`d-link ${restaurant.color}`} onClick={() => setShowModal(true)}>Boka bord</Link>
                             </li>
                             <li className={`d-link-wrapper a1 ${restaurant.color} ${flag ? `` : `flag`}`}>
                                 <p className={`d-link hd-link ${restaurant.color}`}>Menyer</p>
@@ -175,7 +182,7 @@ const Navbar = ({ restaurant }) => {
             </div>
             }
 
-
+            {showModal && <Popup handleClose={handleClose}/>}
 
         </div>
   )

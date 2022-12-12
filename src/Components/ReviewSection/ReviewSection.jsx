@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import './ReviewSection.css'
-import BG from '../../Images/hbg-miljo.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 

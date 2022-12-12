@@ -27,6 +27,10 @@
 .Navbar .ml1 {
     margin-left: .5rem;
 }
+
+.Navbar .indexlow {
+    z-index: -10;
+}
 /* ----- LOGO ----- */
 .Navbar .logo-wrapper {
     opacity: 0%;
@@ -69,6 +73,7 @@
     cursor: pointer;
     overflow: hidden;
     margin-top: .5rem;
+    z-index: 2;
 }
 
 .Navbar .burger span {
@@ -110,7 +115,6 @@
     top: 0;
     width: 100%;
     height: 100vh;
-    z-index: -1;
 }
 
 .Navbar .ham-links-wrapper {

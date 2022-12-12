@@ -1,6 +1,6 @@
 import './Navbar.css'
 import { useState, useRef, useEffect } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import logo from '../../Img/logo.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css'
@@ -24,37 +24,65 @@ const Navbar = ({ restaurant }) => {
     
     const [flag, setFlag] = useState(false)
     
-    const handleClick = () => {
-        if(showMenu) {
-            setShowMenu(false)
-        }
-    }
+    // const handleClick = () => {
+    //     if(showMenu) {
+    //         setShowMenu(false)
+    //     }
+    // }
 
-    const changeBg = () => {
-        if(window.scrollY >= 1) {
-            setColor(true);
-            setFlag(true);
-        }else {
-            setColor(false)
-            setFlag(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if(window.scrollY >= 1) {
+                setColor(true);
+                setFlag(true);
+            }else {
+                setColor(false)
+                setFlag(false);
+            }
+        })
+    }, [])
+
+    useEffect(() => {
+        if(showMenu != false){
+            navRef.current.classList.add("indexlow")
+            console.log('minus')
         }
+        window.addEventListener("scroll", () => {
+
+            if(window.scrollY >= 460  ) {
+                navRef.current.classList.add("show")
+            }else {
+                navRef.current.classList.remove("show")
+            }
+        });
+    }, [showMenu])
+    
+
+    // const changeBg = () => {
+    //     if(window.scrollY >= 1) {
+    //         setColor(true);
+    //         setFlag(true);
+    //     }else {
+    //         setColor(false)
+    //         setFlag(false);
+    //     }
         
-    };
+    // };
 
-    const showLogoOnScroll = () => {
-        if(window.scrollY >= 460  ) {
-            navRef.current.classList.add("show")
-        }else {
-            navRef.current.classList.remove("show")
-        }
-        if(showMenu){
-            navRef.current.classList.remove("show")
-        }
+    // const showLogoOnScroll = () => {
+    //     if(window.scrollY >= 460  ) {
+    //         navRef.current.classList.add("show")
+    //     }else {
+    //         navRef.current.classList.remove("show")
+    //     }
+    //     if(showMenu){
+    //         navRef.current.classList.remove("show")
+    //     }
         
-    };
+    // };
 
-    window.addEventListener("scroll", changeBg)
-    window.addEventListener("scroll", showLogoOnScroll)
+    // window.addEventListener("scroll", changeBg)
+    // window.addEventListener("scroll", showLogoOnScroll)
 
     return (
         <div className={`Navbar fixed ${color ? `color` : `transparent`}`}>

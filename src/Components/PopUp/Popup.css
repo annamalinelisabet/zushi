@@ -1,0 +1,76 @@
+.Popup .dflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Popup .mb-1 {
+    margin-bottom: 1rem;
+}
+
+.Popup .mb-max {
+    margin-bottom: 13rem;
+}
+.Popup .popup-bg {
+    position: fixed;
+    inset: 0;
+    background: #00000085;
+}
+
+.Popup .popup-wrapper {
+    background-color: #fff;
+    width: min(90%, 600px);
+    margin: 10vh auto;
+    padding: 2rem;
+    border-radius: 2px;
+    z-index: 100;
+}
+
+.Popup .btn-pop{
+    color: #000;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.Popup .light {
+    color: #d1d1d1;
+}
+.Popup .form-header {
+    border-bottom: 1px solid #d1d1d1;
+    width: 100%;
+}
+
+.Popup .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Popup .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Popup .form h1 {
+    font-weight: 100;
+    margin-bottom: 3rem;
+}
+
+.Popup .form input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    border-radius: 3px solid #eee;
+}
+
+.Popup .form input::placeholder {
+    font-size: 16px;
+    color: #000;
+}
+
+.Popup .form p {
+    color: blue;
+    margin-top: 2rem;
+}
